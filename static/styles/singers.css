@@ -1,0 +1,11 @@
+.container {
+  max-width: 1000px;
+}
+
+.singers-div {
+  background-color: var(--black);
+}
+
+.singers-div > * {
+  background-color: var(--yellow);
+}

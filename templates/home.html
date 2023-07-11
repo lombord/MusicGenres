@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block title %}
+  Home
+{% endblock title %}
+{% block link %}
+{% endblock link %}
+{% block style %}
+  <style>
+    .links-fixed {
+      overflow: auto;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .links-box {
+      width: 90%;
+      max-width: 900px;
+      min-width: 200px;
+      background-color: var(--yellow);
+      padding: 10em 0;
+      margin: auto;
+    }
+
+    .genre-link {
+      text-decoration: none;
+    }
+
+    .genre-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+{% endblock style %}
+{% block content %}
+  <main>
+    <section class="links-fixed">
+      <div class="links-box">
+        <div class="d-flex flex-column gap-3 text-center">
+          <div>
+            <a class="h2 genre-link" href="{% url 'hiphop:home' %}">HipHop</a>
+          </div>
+          <div>
+            <a class="h2 genre-link" href="{% url 'rb:home' %}">R&B</a>
+          </div>
+          <div>
+            <a class="h2 genre-link" href="{% url 'rock:home' %}">Rock</a>
+          </div>
+          <div>
+            <a class="h2 genre-link" href="{% url 'electronic:home' %}">Electronic</a>
+          </div>
+          <div>
+            <a class="h2 genre-link" href="{% url 'pop:home' %}">POP</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+{% endblock content %}
